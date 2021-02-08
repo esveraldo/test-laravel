@@ -1,17 +1,17 @@
 @extends('app.layouts.basic')
 
-@section('titulo', 'Clientes')
+@section('titulo', 'Home')
 
 @section('conteudo')
 
 <div class="conteudo-pagina">
             <div class="titulo-pagina">
-        <h1>Clientes</h1>
+        <h1>Home</h1>
     </div>
 
     <div class="informacao-pagina">
         <div class="contato-principal">
-            <h3>Clientes</h3>
+            <h3>Home</h3>
         </div>
     </div>  
 </div>
@@ -36,3 +36,4 @@
 </div>
 
 @endsection
+

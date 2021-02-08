@@ -3,12 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/oem/Desktop/Esveraldo/test-laravel/.env</file>
-            <file>file:/home/oem/Desktop/Esveraldo/test-laravel/database/factories/SiteContatoFactory.php</file>
-            <file>file:/home/oem/Desktop/Esveraldo/test-laravel/app/Model/Fornecedor.php</file>
-            <file>file:/home/oem/Desktop/Esveraldo/test-laravel/database/seeds/FornecedorSeeder.php</file>
-            <file>file:/home/oem/Desktop/Esveraldo/test-laravel/database/seeds/SiteContatoSeeder.php</file>
-            <file>file:/home/oem/Desktop/Esveraldo/test-laravel/database/seeds/DatabaseSeeder.php</file>
+            <file>file:/home/oem/Desktop/Esveraldo/test-laravel/app/Model/MotivoContato.php</file>
+            <file>file:/home/oem/Desktop/Esveraldo/test-laravel/app/Model/SiteContato.php</file>
+            <file>file:/home/oem/Desktop/Esveraldo/test-laravel/app/Http/Controllers/PrincipalController.php</file>
+            <file>file:/home/oem/Desktop/Esveraldo/test-laravel/resources/views/site/layouts/components/form_contato.blade.php</file>
+            <file>file:/home/oem/Desktop/Esveraldo/test-laravel/app/Http/Controllers/ContatoController.php</file>
+            <file>file:/home/oem/Desktop/Esveraldo/test-laravel/routes/web.php</file>
         </group>
     </open-files>
 </project-private>
