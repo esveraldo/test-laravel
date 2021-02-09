@@ -199,5 +199,14 @@ button:hover {
     margin: 0px 15px 0px 15px;
 }
 
+.pagination li{
+    display: inline;
+    margin: 0 5px 0 5px;
+}
+
+.pagination li{
+    list-style-type: none;
+}
+
         
 

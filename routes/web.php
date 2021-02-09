@@ -32,6 +32,12 @@ Route::middleware('autenticacao')->prefix('/app')->group(function(){
     Route::get('/sair', 'LoginController@sair')->name('app.sair');
     Route::get('/clientes', 'ClientesController@clientes')->name('app.clientes');
     Route::get('/fornecedores', 'FornecedoresController@fornecedores')->name('app.fornecedores');
+    Route::get('/fornecedores/listar', 'FornecedoresController@listar')->name('app.fornecedores.listar');
+    Route::post('/fornecedores/listar', 'FornecedoresController@listar')->name('app.fornecedores.listar');
+    Route::get('/fornecedores/adicionar', 'FornecedoresController@adicionar')->name('app.fornecedores.adicionar');
+    Route::post('/fornecedores/adicionar', 'FornecedoresController@salvar')->name('app.fornecedores.salvar');
+    Route::get('/fornecedores/editar/{id}', 'FornecedoresController@editar')->name('app.fornecedores.editar');
+    Route::post('/fornecedores/editar', 'FornecedoresController@alterar')->name('app.fornecedores.alterar');
     Route::get('/produtos', 'ProdutosController@produtos')->name('app.produtos');
 });
 

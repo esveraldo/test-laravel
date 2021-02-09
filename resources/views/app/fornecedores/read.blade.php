@@ -6,7 +6,7 @@
 
 <div class="conteudo-pagina">
             <div class="titulo-pagina">
-        <h1>Fornecedores</h1>
+        <h1>Fornecedores - Lista</h1>
     </div>
     
     <div class="menu">
@@ -18,16 +18,29 @@
 
     <div class="informacao-pagina">
         <div class="contato-principal">
-            <div style="width: 30%; margin-left: auto; margin-right: auto;">
-                <form method="post" action="{{ route('app.fornecedores.listar') }}">
-                    @csrf
-                    <input type="text" name="nome" class="borda-preta" placeholder="Nome">
-                    <input type="text" name="site" class="borda-preta" placeholder="Site">
-                    <input type="text" name="uf" class="borda-preta" placeholder="Uf">
-                    <input type="text" name="email" class="borda-preta" placeholder="Email">
-                    <button type="submit" class="borda-preta">Pesquisar</button>
-                </form>
-            </div>
+                <table style="width: 100%;" border='1'>
+                <thead>
+                    <th>Nome</th>
+                    <th>Site</th>
+                    <th>Uf</th>
+                    <th>Email</th>
+                    <th>Editar</th>
+                    <th>Excluir</th>
+                </thead>
+                <tbody>
+                    @foreach($fornecedores as $fornecedor)
+                    <tr>
+                        <td>{{$fornecedor->nome}}</td>
+                        <td>{{$fornecedor->site}}</td>
+                        <td>{{$fornecedor->uf}}</td>
+                        <td>{{$fornecedor->email}}</td>
+                        <td><a href=" {{ route('app.fornecedores.editar', $fornecedor->id) }}">Editar</a></td>
+                    <td><a href="">Excluir</a></td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+            {{$fornecedores->appends($request)->links()}}
         </div>
     </div>  
 </div>
