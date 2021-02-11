@@ -38,7 +38,8 @@ Route::middleware('autenticacao')->prefix('/app')->group(function(){
     Route::post('/fornecedores/adicionar', 'FornecedoresController@salvar')->name('app.fornecedores.salvar');
     Route::get('/fornecedores/editar/{id}', 'FornecedoresController@editar')->name('app.fornecedores.editar');
     Route::post('/fornecedores/editar', 'FornecedoresController@alterar')->name('app.fornecedores.alterar');
-    Route::get('/produtos', 'ProdutosController@produtos')->name('app.produtos');
+    Route::get('/fornecedores/excluir/{id}', 'FornecedoresController@excluir')->name('app.fornecedores.excluir');
+    Route::resource('produtos', 'ProdutosController');
 });
 
 //Teste

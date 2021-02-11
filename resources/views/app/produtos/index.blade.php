@@ -6,12 +6,54 @@
 
 <div class="conteudo-pagina">
             <div class="titulo-pagina">
-        <h1>Produtos</h1>
+        <h1>Listar produtos</h1>
+    </div>
+    
+    <div class="menu">
+        <ul>
+            <li><a href="{{ route('produtos.create') }}">Novo</a></li>
+            <li><a href="">Consulta</a></li>
+        </ul>
     </div>
 
     <div class="informacao-pagina">
         <div class="contato-principal">
-            <h3>Produtos</h3>
+            {{ $msg }}
+            <table border='1'>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                        <th>Peso</th>
+                        <th>Unidade</th>
+                        <th>Alterar</th>
+                        <th>Excluir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($produtos as $produto)
+                    <tr>
+                        <td>{{ $produto->nome }}</td>
+                        <td>{{ $produto->descricao }}</td>
+                        <td>{{ $produto->peso }}</td>
+                        <td>{{ $produto->unidade_id }}</td>
+                        <td>
+                        <form method="put" action="">
+                            <input type="hidden" name="id" value="">
+                            <button type="submit">Alterar</button>
+                        </form>
+                        </td>
+                        <td>
+                        <form method="delete" action="">
+                            <input type="hidden" name="id" value="">
+                            <button type="submit">Excluir</button>
+                        </form>   
+                        </td>     
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+            {{$produtos->appends($request)->links()}}
         </div>
     </div>  
 </div>

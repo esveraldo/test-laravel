@@ -93,4 +93,13 @@ class FornecedoresController extends Controller
         
         return view('app.fornecedores.update', ['fornecedor' => $fornecedor, 'mensagem' => $mensagem]);
     }
+    
+    public function excluir($id){
+        // O registro fica no banco com a data da exclusão
+        Fornecedor::find($id)->delete();
+        // Excluir permanentemente o registro
+        //Fornecedor::find($id)->forceDelete();
+        
+        return redirect()->route('app.fornecedores');
+    }
 }

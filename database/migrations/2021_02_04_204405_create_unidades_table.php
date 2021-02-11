@@ -16,7 +16,7 @@ class CreateUnidadesTable extends Migration
         Schema::create('unidades', function (Blueprint $table) {
             $table->id();
             $table->string('unidade', 5); //cm, mm, kg
-            $table->string('deacricao', 100);
+            $table->string('descricao', 100);
             $table->timestamps();
         });
         
